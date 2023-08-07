@@ -62,12 +62,12 @@ def kmeans():
     kecamatan_cluster_list = kecamatan_cluster_df.to_dict(orient="records")
 
     # Evaluate the clustering using Silhouette Score
-    # silhouette_avg = silhouette_score(X, labels)
+    silhouette_avg = silhouette_score(X, labels)
     
     result_data = {
         "num_clusters": num_clusters,
         'kecamatan_cluster': kecamatan_cluster_list,
-        # 'silhouette_avg': silhouette_avg,
+        'silhouette_avg': silhouette_avg,
         'all_labels': all_labels,
         'all_values': all_values,
         'all_iterations': all_iterations,
